@@ -22,3 +22,20 @@ def hay_duplicados(lista):
             return True
     return False
 
+
+def elimina_duplicados(lista1):
+    lista1 = sorted(lista1)
+    lista2 = []
+    for x in lista1[:]:
+        if lista1.count(x)>1:
+            lista1.pop(x)
+            lista2.append(x)
+    return lista2
+
+
+
+def palindromos(lista):
+    for palabra in lista[:]:
+        if not palabra == palabra[::-1]:
+            lista.remove(palabra)
+    return lista
