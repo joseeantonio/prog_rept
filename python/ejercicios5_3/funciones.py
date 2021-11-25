@@ -49,3 +49,5 @@ def juego_scrabble(palabra):
             if x == letra:
                  puntuacion += punto
     return puntuacion
+
+
