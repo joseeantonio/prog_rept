@@ -13,8 +13,8 @@ def validar_contraseña(veces,letra,contraseña):
 
 def validar_contraseña_2(posiciones,letra,contraseña):
     letra = letra.replace(":", "")
-    posiciones = posiciones.replace("-","")
-    for x in posiciones:
-        if not contraseña[int(x)-1]==letra:
-            return False
-    return True
+    posiciones = posiciones.split("-")
+    if contraseña[int(posiciones[0])-1]==letra:
+        if not contraseña[int(posiciones[1])-1]==letra:
+            return True
+    return False
